@@ -4,5 +4,5 @@
 define(TEMPLATE, 'templates/index.php');
 
 //email
-define('TO','mashaod_93@mail.ru');
+define('TO','yoink1988@gmail.com');
 define('EMAIL','HostingMaks');
