@@ -137,7 +137,7 @@ class Model
 		$headers = "Content-type: text/html; charset=utf-8" . "\r\n".
 				"From: " . $this->userEmail . "\r\n".
 				"Reply-To: " . $this->userEmail . "\r\n".
-				"Content-type: text/html; charset=utf-8" . "\r\n".;
+				"Content-type: text/html; charset=utf-8" . "\r\n";
 		
 		if (mail(TO, $this->userSubject, $sendMessage, $headers))
         {
