@@ -135,8 +135,8 @@ class Model
 				'<p> Date: ' . date("Y-m-d H:i:s") . '</p>';
 		
 		$headers = "Content-type: text/html; charset=utf-8" . 
-				"From: " . $this->userEmail . PHP_EOL . 
-				//"Reply-To: " . $this->userEmail . PHP_EOL . 
+				"From: " . $this->userEmail . 
+				"Reply-To: " . $this->userEmail . 
 				"Content-type: text/html; charset=utf-8";
 		
 		if (mail(TO, $this->userSubject, $sendMessage, $headers))
