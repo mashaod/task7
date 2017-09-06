@@ -129,10 +129,11 @@ class Model
 	public function sendEmail()
 	{
 		date_default_timezone_set('Europe/Kiev');
-		$sendMessage = 'Name: ' . $this->userName . "123 <br /> 123" . '\n\r' . 
+		echo 'TOO'.PHP_EOL.'TOO'.PHP_EOL.'TOO';
+		$sendMessage = '<p> Name: ' . $this->userName . '</p>' . 
 			       '<p> Message: ' . $this->userMessage . '</p>' . 
-			       'IP-adress: ' . $_SERVER['REMOTE_ADDR'] . PHP_EOL . 
-				'Date: ' . date("Y-m-d H:i:s");
+			       '<p> IP-adress: ' . $_SERVER['REMOTE_ADDR'] . '</p>' . 
+				'<p> Date: ' . date("Y-m-d H:i:s") . '</p>';
 		
 		$headers = "Content-type: text/html; charset=utf-8" . 
 				"From: " . $this->userEmail . PHP_EOL . 
