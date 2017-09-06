@@ -142,7 +142,7 @@ class Model
 		if (mail(TO, $this->userSubject, $sendMessage, $headers))
         {
             $this->placeHolders['%NAME%'] = '';
-            $this->placeHolders['%SELECT_' . $_POST['subject'] . '%'] = '';
+            $this->placeHolders['%SUBJECT_' . $_POST['subject'] . '%'] = '';
             $this->placeHolders['%EMAIL%'] = '';
             $this->placeHolders['%MESSAGE%'] = '';
             $this->placeHolders['%SUCCESS%'] = 'Thank you, for your mail!';
