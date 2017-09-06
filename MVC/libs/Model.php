@@ -129,7 +129,6 @@ class Model
 	public function sendEmail()
 	{
 		date_default_timezone_set('Europe/Kiev');
-		echo 'TOO'.PHP_EOL.'TOO'.PHP_EOL.'TOO';
 		$sendMessage = '<p> Name: ' . $this->userName . '</p>' . 
 			       '<p> Message: ' . $this->userMessage . '</p>' . 
 			       '<p> IP-adress: ' . $_SERVER['REMOTE_ADDR'] . '</p>' . 
