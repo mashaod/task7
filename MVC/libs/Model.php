@@ -134,10 +134,10 @@ class Model
 			       '<p> IP-adress: ' . $_SERVER['REMOTE_ADDR'] . '</p>' . 
 				'<p> Date: ' . date("Y-m-d H:i:s") . '</p>';
 		
-		$headers = "Content-type: text/html; charset=utf-8" . 
-				"From: " . $this->userEmail . 
-				"Reply-To: " . $this->userEmail . 
-				"Content-type: text/html; charset=utf-8";
+		$headers = "Content-type: text/html; charset=utf-8" . "\r\n".
+				"From: " . $this->userEmail . "\r\n".
+				"Reply-To: " . $this->userEmail . "\r\n".
+				"Content-type: text/html; charset=utf-8" . "\r\n".;
 		
 		if (mail(TO, $this->userSubject, $sendMessage, $headers))
         {
