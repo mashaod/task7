@@ -129,14 +129,15 @@ class Model
 	public function sendEmail()
 	{
 		date_default_timezone_set('Europe/Kiev');
-		$sendMessage = "Name: " . $this->userName . "\r\n" . 
-			       "Message: " . $this->userMessage . "\r\n" . 
-			       "IP-adress: " . $_SERVER['REMOTE_ADDR'] . "\r\n" . 
-				"Date: " . date("Y-m-d H:i:s");
+		$sendMessage = 'Name: ' . $this->userName . PHP_EOL . 
+			       'Message: ' . $this->userMessage . PHP_EOL . 
+			       'IP-adress: ' . $_SERVER['REMOTE_ADDR'] . PHP_EOL . 
+				'Date: ' . date("Y-m-d H:i:s");
 		
-		$headers = "From: " . $this->userEmail . "\r\n" . 
-				"Reply-To: " . $this->userEmail . "\r\n" . 
-				"Content-type: text/html; charset=utf-8" . "\r\n";
+		$headers = "Content-type: text/html; charset=utf-8" . 
+				"From: " . $this->userEmail . PHP_EOL . 
+				//"Reply-To: " . $this->userEmail . PHP_EOL . 
+				"Content-type: text/html; charset=utf-8";
 		
 		if (mail(TO, $this->userSubject, $sendMessage, $headers))
         {
@@ -152,8 +153,5 @@ class Model
             $this->placeHolders['%ERRORS_SEND%'] = 'Mail was rejected';
             return false;
         }
-	}
-				
-		// return mail()
-			
+	}		
 }
